@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>بصمتي الإلكترونية | Basmati - تصميم مواقع احترافية</title>
+<meta name="description" content="بصمتي الإلكترونية (Basmati): تصميم وتطوير مواقع الشركات والمطاعم والمتاجر الإلكترونية بتصميم عصري يعمل على كل الأجهزة. تواصل معنا عبر واتساب.">
+<meta name="theme-color" content="#0754e8">
+<meta property="og:title" content="بصمتي الإلكترونية | تصميم مواقع احترافية">
+<meta property="og:site_name" content="بصمتي الإلكترونية">
+<meta property="og:image" content="https://uivoxera-lab.github.io/basmati/og-image.jpg">
+<meta property="og:url" content="https://uivoxera-lab.github.io/basmati/">
+<meta property="og:description" content="نحول أفكارك إلى مواقع إلكترونية عصرية: شركات، مطاعم، ومتاجر.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue:#0754e8;
+  --blue2:#367bff;
+  --navy:#071b43;
+  --text:#142443;
+  --muted:#71809d;
+  --bg:#f5f8ff;
+  --white:#fff;
+  --border:#e5ebf7;
+  --shadow:0 20px 60px rgba(20,65,150,.09);
+}
+* {margin:0;padding:0;box-sizing:border-box}
+html {scroll-behavior:smooth;scroll-padding-top:80px}
+body {font-family:'Cairo',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+a {text-decoration:none;color:inherit}
+button {font-family:inherit}
+.container {width:min(1200px,92%);margin:auto}
+
+/* NAVIGATION */
+header {position:fixed;top:0;left:0;width:100%;z-index:1000;padding:14px 0;transition:.3s}
+header.scrolled {background:rgba(255,255,255,.92);backdrop-filter:blur(18px);box-shadow:0 5px 30px #12366b10;padding:8px 0}
+.nav {display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo {display:flex;align-items:center;gap:10px}
+img.logo-symbol {object-fit:cover;display:block;background:#0b3fb8}
+.logo-symbol {width:47px;height:47px;display:grid;place-items:center;background:linear-gradient(135deg,#0754e8,#62a1ff);color:white;font-size:30px;font-weight:900;border-radius:14px;box-shadow:0 8px 20px #0754e83d}
+.logo-text h2 {font-size:21px;color:var(--navy);line-height:1.1}
+.logo-text small {font-size:10px;letter-spacing:1px;color:var(--muted)}
+.nav-links {display:flex;align-items:center;gap:28px}
+.nav-links a {font-size:14px;font-weight:800;color:#35435f;transition:.3s;position:relative}
+.nav-links a:hover {color:var(--blue)}
+.nav-links a:after {content:"";position:absolute;bottom:-8px;right:0;width:0;height:2px;background:var(--blue);transition:.3s}
+.nav-links a:hover:after {width:100%}
+.btn {display:inline-flex;justify-content:center;align-items:center;gap:10px;padding:14px 25px;border-radius:50px;background:linear-gradient(110deg,var(--blue),#347cff);color:white;font-weight:800;font-size:14px;border:0;cursor:pointer;box-shadow:0 10px 25px #0754e830;transition:.35s}
+.btn:hover {transform:translateY(-4px);box-shadow:0 15px 30px #0754e84a}
+.menu-btn {display:none;background:none;border:0;font-size:27px;color:var(--blue);cursor:pointer}
+a:focus-visible,button:focus-visible {outline:3px solid #7fb0ff;outline-offset:3px}
+
+/* HERO */
+.hero {min-height:720px;padding:140px 0 90px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 10% 30%,#d5e5ff 0,transparent 40%),radial-gradient(ellipse at 90% 10%,#e6edff 0,transparent 35%),linear-gradient(120deg,#f7faff,#fff)}
+.hero:before {content:"";position:absolute;width:500px;height:500px;border:1px solid #b9d0ff;border-radius:50%;top:70px;left:-180px;opacity:.5}
+.hero:after {content:"";position:absolute;width:350px;height:350px;background:#dce9ff;border-radius:50%;bottom:-250px;right:-100px;filter:blur(20px)}
+.hero-grid {display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:50px;position:relative;z-index:2}
+.hero-text {animation:fadeUp .9s ease both}
+.eyebrow {display:inline-flex;align-items:center;gap:9px;padding:9px 17px;border:1px solid #d5e3ff;border-radius:40px;background:#ffffffb8;color:var(--blue);font-weight:800;font-size:13px;margin-bottom:24px}
+.eyebrow span {width:8px;height:8px;border-radius:50%;background:#ffb52e;box-shadow:0 0 0 5px #ffb52e33}
+.hero h1 {font-size:clamp(36px,4.3vw,59px);line-height:1.45;color:var(--navy);font-weight:900;margin-bottom:20px}
+.hero h1 span {display:block;background:linear-gradient(100deg,#0754e8,#5a99ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-description {font-size:16px;line-height:2.1;color:#64718c;max-width:530px;margin-bottom:30px}
+.hero-buttons {display:flex;gap:14px;flex-wrap:wrap}
+.btn-outline {padding:13px 24px;border:1px solid #b7ccf8;border-radius:50px;color:var(--blue);font-weight:800;background:#fff;transition:.3s}
+.btn-outline:hover {background:#eaf1ff;transform:translateY(-3px)}
+.hero-stats {display:flex;gap:35px;margin-top:42px;padding-top:25px;border-top:1px solid #e1e9f8}
+.stat strong {display:block;font-size:24px;color:var(--navy);font-weight:900}
+.stat small {font-size:12px;color:var(--muted)}
+.hero-visual {position:relative;animation:floatIn 1s ease both}
+.hero-main-img {width:100%;height:420px;object-fit:cover;border-radius:30px;box-shadow:0 30px 70px #123d8730;border:8px solid #ffffffc9;background:linear-gradient(135deg,#dbe7ff,#bcd3ff)}
+.floating-card {position:absolute;background:#ffffffed;backdrop-filter:blur(12px);border:1px solid #fff;padding:15px 20px;border-radius:17px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;animation:float 4s ease-in-out infinite}
+.floating-card.one {top:40px;right:-35px}
+.floating-card.two {bottom:35px;left:-25px;animation-delay:1s}
+.float-icon {width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:#eaf1ff;color:var(--blue);font-size:22px}
+.floating-card strong {display:block;font-size:13px}
+.floating-card small {font-size:11px;color:var(--muted)}
+
+/* GENERAL */
+section {padding:95px 0}
+.section-heading {text-align:center;margin-bottom:50px}
+.section-tag {display:inline-block;padding:7px 15px;border-radius:30px;background:#e9f0ff;color:var(--blue);font-size:12px;font-weight:900;margin-bottom:13px}
+.section-heading h2 {font-size:35px;color:var(--navy);font-weight:900}
+.section-heading h2 span {color:var(--blue)}
+.section-heading p {color:var(--muted);font-size:14px;margin-top:10px}
+
+/* SERVICES */
+.services-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service {padding:30px 25px;border-radius:22px;background:linear-gradient(145deg,#fff,#f8faff);border:1px solid var(--border);position:relative;overflow:hidden;transition:.35s}
+.service:before {content:"";position:absolute;width:130px;height:130px;border-radius:50%;background:#e9f1ff;top:-75px;left:-65px;transition:.4s}
+.service:hover {transform:translateY(-9px);box-shadow:var(--shadow);border-color:#a9c6ff}
+.service:hover:before {transform:scale(1.7)}
+.service-icon {position:relative;width:62px;height:62px;display:grid;place-items:center;background:linear-gradient(135deg,#e8f0ff,#d7e6ff);border-radius:18px;font-size:29px;margin-bottom:22px}
+.service h3 {font-size:19px;margin-bottom:10px;color:var(--navy)}
+.service p {font-size:13px;line-height:2;color:var(--muted)}
+.service-link {display:inline-block;color:var(--blue);font-size:13px;font-weight:900;margin-top:20px}
+
+/* ABOUT */
+.about {background:linear-gradient(120deg,#edf3ff,#f9fbff);position:relative;overflow:hidden}
+.about-grid {display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.about-image {position:relative}
+.about-image img {width:100%;height:auto;aspect-ratio:1/1;max-width:460px;display:block;margin-inline:auto;object-fit:cover;border-radius:28px;box-shadow:0 25px 60px #17458a24;background:linear-gradient(135deg,#dbe7ff,#bcd3ff)}
+.experience {position:absolute;bottom:25px;right:-20px;background:white;border-radius:18px;padding:18px 23px;box-shadow:var(--shadow)}
+.experience strong {font-size:28px;color:var(--blue);display:block}
+.experience small {font-size:12px;color:var(--muted)}
+.about-content .section-tag {margin-bottom:15px}
+.about-content h2 {font-size:34px;line-height:1.5;color:var(--navy);margin-bottom:15px}
+.about-content>p {color:var(--muted);font-size:14px;line-height:2.1;margin-bottom:25px}
+.feature-list {display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.feature-item {display:flex;align-items:center;gap:12px}
+.check {flex-shrink:0;width:34px;height:34px;border-radius:11px;background:#e0ebff;color:var(--blue);display:grid;place-items:center;font-weight:900}
+.feature-item strong {font-size:13px;color:var(--navy)}
+
+/* WHY */
+.why-grid {display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.why-card {background:white;border:1px solid var(--border);border-radius:20px;padding:27px 17px;text-align:center;transition:.3s}
+.why-card:hover {transform:translateY(-7px);box-shadow:var(--shadow)}
+.why-icon {width:60px;height:60px;display:grid;place-items:center;margin:0 auto 16px;background:#edf3ff;border-radius:18px;font-size:26px}
+.why-card h3 {font-size:16px;color:var(--navy);margin-bottom:7px}
+.why-card p {font-size:12px;line-height:1.9;color:var(--muted)}
+
+/* PORTFOLIO */
+.portfolio {background:#f8faff}
+.project-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.project {background:white;border-radius:22px;overflow:hidden;border:1px solid var(--border);transition:.35s}
+.project:hover {transform:translateY(-8px);box-shadow:var(--shadow)}
+.project-image {height:240px;overflow:hidden;position:relative;background:linear-gradient(135deg,#dbe7ff,#bcd3ff)}
+.project-image img {width:100%;height:100%;object-fit:cover;transition:.6s}
+.project:hover img {transform:scale(1.08)}
+.project-content {padding:21px}
+.project-content span {font-size:11px;color:var(--blue);font-weight:900}
+.project-content h3 {font-size:19px;color:var(--navy);margin:5px 0}
+.project-content p {font-size:12px;color:var(--muted)}
+
+/* CTA */
+.cta-section {padding:50px 0 90px}
+.cta {background:radial-gradient(circle at 10% 100%,#2b72ed 0,transparent 40%),linear-gradient(115deg,#071b48,#0754e8);padding:65px 55px;border-radius:30px;position:relative;overflow:hidden;color:white;display:flex;align-items:center;justify-content:space-between;gap:25px;box-shadow:0 25px 60px #0754e82b}
+.cta:after {content:"";position:absolute;width:350px;height:350px;border:1px solid #ffffff22;border-radius:50%;left:-100px;top:-220px}
+.cta h2 {font-size:34px;font-weight:900}
+.cta p {font-size:14px;color:#d8e5ff;margin-top:10px}
+.cta-actions {display:flex;gap:12px;flex-wrap:wrap;margin-top:25px;position:relative;z-index:2}
+.cta-actions a {display:inline-block;background:white;color:var(--blue);padding:13px 28px;border-radius:50px;font-weight:900;transition:.3s}
+.cta-actions a.ghost {background:transparent;color:white;border:1px solid #ffffff66}
+.cta-actions a:hover {transform:translateY(-4px)}
+.cta-info {display:flex;gap:18px;flex-wrap:wrap;margin-top:20px;font-size:13px;color:#d8e5ff;position:relative;z-index:2}
+.cta-info a:hover {color:white;text-decoration:underline}
+.cta-art {font-size:95px;position:relative;z-index:2}
+
+/* FOOTER */
+footer {background:#071832;color:white;padding:55px 0 20px}
+.footer-grid {display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:45px;padding-bottom:35px}
+footer .logo-text h2 {color:white}
+footer .logo-text small {color:#9eb2d4}
+.footer-description {font-size:13px;color:#9eacc6;line-height:2;margin-top:18px;max-width:350px}
+.footer-col h3 {font-size:16px;margin-bottom:18px}
+.footer-col a {display:block;color:#a9b7d0;font-size:13px;margin:12px 0;transition:.3s}
+.footer-col a:hover {color:white;padding-right:5px}
+.copyright {border-top:1px solid #ffffff18;padding-top:20px;text-align:center;color:#8194b5;font-size:12px}
+
+/* FLOATING WHATSAPP */
+.wa-float {position:fixed;left:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:900;display:flex;align-items:center;gap:8px;background:#25d366;color:#fff;padding:12px 18px;border-radius:50px;font-weight:800;font-size:14px;box-shadow:0 10px 25px #25d36655;transition:.3s}
+.wa-float:hover {transform:translateY(-4px)}
+
+/* ANIMATIONS */
+.reveal {opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show {opacity:1;transform:translateY(0)}
+@keyframes float {0%,100% {transform:translateY(0)} 50% {transform:translateY(-12px)}}
+@keyframes fadeUp {from {opacity:0;transform:translateY(25px)} to {opacity:1;transform:translateY(0)}}
+@keyframes floatIn {from {opacity:0;transform:translateX(-30px)} to {opacity:1;transform:translateX(0)}}
+@media (prefers-reduced-motion:reduce) {
+  *,*:before,*:after {animation:none!important;transition:none!important}
+  .reveal {opacity:1;transform:none}
+  html {scroll-behavior:auto}
+}
+
+/* RESPONSIVE */
+@media(max-width:950px) {
+  .nav-links {gap:13px}
+  .nav-links a {font-size:12px}
+  .nav>.btn {font-size:11px;padding:12px 15px}
+  .hero-grid {gap:25px}
+  .services-grid {grid-template-columns:repeat(2,1fr)}
+  .why-grid {grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px) {
+  header {padding:10px 0}
+  .menu-btn {display:block}
+  .nav>.btn {display:none}
+  .nav-links {display:none;position:absolute;top:72px;right:4%;left:4%;background:white;border:1px solid var(--border);padding:22px;border-radius:20px;flex-direction:column;align-items:stretch;box-shadow:var(--shadow)}
+  .nav-links.active {display:flex}
+  .nav-links a {padding:9px;font-size:14px}
+  .hero {padding:125px 0 65px;min-height:auto}
+  .hero-grid {grid-template-columns:1fr;text-align:center}
+  .hero-text {order:1}
+  .hero-visual {order:2;margin:20px 12px}
+  .hero-description {margin-right:auto;margin-left:auto}
+  .hero-buttons {justify-content:center}
+  .hero-stats {justify-content:center;gap:22px}
+  .hero-main-img {height:270px}
+  .floating-card.one {right:-15px}
+  .floating-card.two {left:-15px}
+  section {padding:65px 0}
+  .section-heading h2 {font-size:29px}
+  .about-grid {grid-template-columns:1fr;gap:40px}
+  .about-image {order:2}
+  .about-image img {max-width:320px}
+  .experience {right:-8px}
+  .project-grid {grid-template-columns:1fr 1fr}
+  .project-image {height:160px}
+  .cta {padding:40px 23px;flex-direction:column;text-align:center}
+  .cta h2 {font-size:27px}
+  .cta-actions,.cta-info {justify-content:center}
+  .cta-art {font-size:65px}
+  .footer-grid {grid-template-columns:1fr 1fr}
+  .footer-grid>div:first-child {grid-column:1/-1}
+}
+@media(max-width:430px) {
+  .services-grid {grid-template-columns:1fr}
+  .project-grid {grid-template-columns:1fr}
+  .project-image {height:210px}
+  .feature-list {grid-template-columns:1fr}
+  .hero h1 {font-size:35px}
+  .hero-stats {gap:15px}
+  .stat strong {font-size:20px}
+  .floating-card {padding:10px}
+  .footer-grid {grid-template-columns:1fr}
+  .footer-grid>div:first-child {grid-column:auto}
+}
+</style>
+</head>
+
+<body>
+
+<header id="header">
+  <div class="container nav">
+    <a class="logo" href="#home" aria-label="بصمتي الإلكترونية">
+      <img class="logo-symbol" src="logo.png" alt="" width="47" height="47">
+      <div class="logo-text"><h2>بصمتي الإلكترونية</h2><small>BASMATI.WEB</small></div>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="التنقل الرئيسي">
+      <a href="#home">الرئيسية</a>
+      <a href="#services">الخدمات</a>
+      <a href="#about">من نحن</a>
+      <a href="#why">المميزات</a>
+      <a href="#portfolio">أعمالنا</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+
+    <a href="#contact" class="btn">اطلب موقعك الآن ←</a>
+    <button class="menu-btn" id="menuBtn" aria-label="القائمة" aria-expanded="false" aria-controls="navLinks">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div class="hero-visual">
+      <img class="hero-main-img" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200" alt="تطوير المواقع" fetchpriority="high">
+      <div class="floating-card one">
+        <div class="float-icon">⚡</div>
+        <div><strong>أداء احترافي</strong><small>سرعة وجودة عالية</small></div>
+      </div>
+      <div class="floating-card two">
+        <div class="float-icon">✦</div>
+        <div><strong>تصميم إبداعي</strong><small>نصنع الفرق في كل تفصيل</small></div>
+      </div>
+    </div>
+
+    <div class="hero-text">
+      <div class="eyebrow"><span></span> حلول رقمية متكاملة</div>
+      <h1>أفكارك تستحق <span>موقعاً استثنائياً</span></h1>
+      <p class="hero-description">
+        في بصمتي الإلكترونية نحول أفكارك إلى تجارب رقمية مميزة. نصمم ونطور مواقع إلكترونية تجمع بين الجمال والأداء لتساعد أعمالك على النمو والتميز.
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn">ابدأ مشروعك الآن ↗</a>
+        <a href="#portfolio" class="btn-outline">استكشف أعمالنا ←</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>واتساب</strong><small>رد سريع</small></div>
+        <div class="stat"><strong>جوال</strong><small>يعمل على كل الأجهزة</small></div>
+        <div class="stat"><strong>عصري</strong><small>تصميم يناسب مشروعك</small></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-heading reveal">
+      <span class="section-tag">ماذا نقدم؟</span>
+      <h2>خدمات <span>تصنع الفرق</span></h2>
+      <p>حلول تقنية متكاملة تساعدك على بناء حضور رقمي قوي</p>
+    </div>
+    <div class="services-grid">
+      <div class="service reveal"><div class="service-icon">🏢</div><h3>مواقع الشركات</h3><p>مواقع احترافية تعكس هوية شركتك وتعرض خدماتك بأفضل صورة.</p><a href="#contact" class="service-link">اكتشف الخدمة ←</a></div>
+      <div class="service reveal"><div class="service-icon">🛍️</div><h3>المتاجر الإلكترونية</h3><p>متاجر عصرية لعرض المنتجات وتقديم تجربة تسوق سهلة وجذابة.</p><a href="#contact" class="service-link">اكتشف الخدمة ←</a></div>
+      <div class="service reveal"><div class="service-icon">🍽️</div><h3>مواقع المطاعم</h3><p>اعرض قائمتك وخدماتك واستقبل طلبات عملائك بطريقة سهلة.</p><a href="#contact" class="service-link">اكتشف الخدمة ←</a></div>
+      <div class="service reveal"><div class="service-icon">📅</div><h3>أنظمة الحجز</h3><p>أنظمة لتنظيم المواعيد والحجوزات وإدارة الطلبات.</p><a href="#contact" class="service-link">اكتشف الخدمة ←</a></div>
+      <div class="service reveal"><div class="service-icon">📱</div><h3>التصميم المتجاوب</h3><p>تجربة استخدام ممتازة على الهواتف والأجهزة اللوحية والكمبيوتر.</p><a href="#contact" class="service-link">اكتشف الخدمة ←</a></div>
+      <div class="service reveal"><div class="service-icon">💬</div><h3>ربط واتساب</h3><p>تسهيل التواصل مع العملاء وتحويل الزوار إلى عملاء محتملين.</p><a href="#contact" class="service-link">اكتشف الخدمة ←</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-image reveal">
+      <img src="logo-full.jpg" alt="شعار بصمتي الإلكترونية" loading="lazy" width="900" height="900">
+      <div class="experience"><strong>بصمتي</strong><small>بصمتك الرقمية تبدأ من هنا</small></div>
+    </div>
+    <div class="about-content reveal">
+      <span class="section-tag">من نحن</span>
+      <h2>نحول رؤيتك إلى <span style="color:var(--blue)">واقع رقمي</span></h2>
+      <p>نؤمن أن كل مشروع يستحق حضوراً رقمياً يليق به. لذلك نهتم بأدق التفاصيل، من الفكرة والتصميم حتى التطوير وتجربة المستخدم.</p>
+      <div class="feature-list">
+        <div class="feature-item"><span class="check">✓</span><strong>تصاميم عصرية</strong></div>
+        <div class="feature-item"><span class="check">✓</span><strong>سرعة وأداء</strong></div>
+        <div class="feature-item"><span class="check">✓</span><strong>تجربة مستخدم مميزة</strong></div>
+        <div class="feature-item"><span class="check">✓</span><strong>اهتمام بالتفاصيل</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="container">
+    <div class="section-heading reveal">
+      <span class="section-tag">لماذا بصمتي؟</span>
+      <h2>الجودة تبدأ من <span>التفاصيل</span></h2>
+      <p>نعمل لنقدم لك تجربة رقمية تستحقها</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-icon">⚡</div><h3>سرعة عالية</h3><p>أداء سريع وتجربة استخدام سلسة.</p></div>
+      <div class="why-card reveal"><div class="why-icon">🛡️</div><h3>أمان وحماية</h3><p>اهتمام بأمان الموقع وحماية البيانات.</p></div>
+      <div class="why-card reveal"><div class="why-icon">🎨</div><h3>تصميم إبداعي</h3><p>واجهات عصرية تعكس شخصية مشروعك.</p></div>
+      <div class="why-card reveal"><div class="why-icon">🎧</div><h3>دعم فني</h3><p>مساعدة ومتابعة بعد تسليم المشروع.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-heading reveal">
+      <span class="section-tag">معرض أعمالنا</span>
+      <h2>مشاريع <span>نفخر بها</span></h2>
+      <p>نماذج توضح ما يمكننا تقديمه لمشروعك</p>
+    </div>
+    <div class="project-grid">
+      <div class="project reveal">
+        <div class="project-image"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900" alt="مطعم" loading="lazy"></div>
+        <div class="project-content"><span>RESTAURANT WEBSITE</span><h3>موقع مطعم</h3><p>تجربة رقمية عصرية للمطاعم والمقاهي.</p></div>
+      </div>
+      <div class="project reveal">
+        <div class="project-image"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=900" alt="متجر" loading="lazy"></div>
+        <div class="project-content"><span>ONLINE STORE</span><h3>متجر إلكتروني</h3><p>واجهة احترافية لعرض المنتجات وتسويقها.</p></div>
+      </div>
+      <div class="project reveal">
+        <div class="project-image"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900" alt="شركة" loading="lazy"></div>
+        <div class="project-content"><span>BUSINESS WEBSITE</span><h3>موقع شركة</h3><p>حضور رقمي احترافي يعكس هوية الأعمال.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <div class="cta reveal">
+      <div>
+        <span class="section-tag" style="background:#ffffff20;color:white">لنبدأ معاً</span>
+        <h2>مشروعك القادم يبدأ من هنا 🚀</h2>
+        <p>شاركنا فكرتك ودعنا نحولها إلى تجربة رقمية استثنائية.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/249114237664?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D9%85%D9%88%D9%82%D8%B9" target="_blank" rel="noopener">تواصل عبر واتساب ↗</a>
+          <a class="ghost" href="https://www.tiktok.com/@basmati.web" target="_blank" rel="noopener">تيك توك</a>
+        </div>
+        <div class="cta-info">
+          <a href="https://wa.me/249114237664?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D9%85%D9%88%D9%82%D8%B9" target="_blank" rel="noopener" dir="ltr">📱 011 423 7664</a>
+          <a href="mailto:uivoxera@gmail.com" dir="ltr">✉️ uivoxera@gmail.com</a>
+          <a href="https://www.tiktok.com/@basmati.web" target="_blank" rel="noopener" dir="ltr">🎵 @basmati.web</a>
+        </div>
+      </div>
+      <div class="cta-art" aria-hidden="true">🚀</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="#home">
+          <img class="logo-symbol" src="logo.png" alt="" width="47" height="47">
+          <div class="logo-text"><h2>بصمتي الإلكترونية</h2><small>BASMATI.WEB</small></div>
+        </a>
+        <p class="footer-description">نبني تجارب رقمية مميزة تساعد الشركات والمشاريع على الوصول إلى أهدافها.</p>
+      </div>
+      <div class="footer-col">
+        <h3>روابط سريعة</h3>
+        <a href="#home">الرئيسية</a>
+        <a href="#services">خدماتنا</a>
+        <a href="#about">من نحن</a>
+        <a href="#portfolio">أعمالنا</a>
+      </div>
+      <div class="footer-col">
+        <h3>تواصل معنا</h3>
+        <a href="https://wa.me/249114237664?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D9%85%D9%88%D9%82%D8%B9" target="_blank" rel="noopener">واتساب: <span dir="ltr">011 423 7664</span></a>
+        <a href="https://www.tiktok.com/@basmati.web" target="_blank" rel="noopener">تيك توك: <span dir="ltr">@basmati.web</span></a>
+        <a href="mailto:uivoxera@gmail.com">uivoxera@gmail.com</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 بصمتي الإلكترونية. جميع الحقوق محفوظة.</div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/249114237664?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D9%85%D9%88%D9%82%D8%B9" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">💬 واتساب</a>
+
+<script>
+const header=document.getElementById("header"),navLinks=document.getElementById("navLinks"),menuBtn=document.getElementById("menuBtn");
+const onScroll=()=>header.classList.toggle("scrolled",window.scrollY>40);
+window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+
+function setMenu(open){navLinks.classList.toggle("active",open);menuBtn.setAttribute("aria-expanded",String(open))}
+menuBtn.addEventListener("click",()=>setMenu(!navLinks.classList.contains("active")));
+navLinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>setMenu(false)));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")setMenu(false)});
+
+// Hide a photo (keep the gradient background) if it fails to load
+document.querySelectorAll("img").forEach(img=>img.addEventListener("error",()=>{img.style.visibility="hidden"}));
+
+// Reveal on scroll
+const els=document.querySelectorAll(".reveal");
+if("IntersectionObserver" in window){
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add("show");io.unobserve(en.target)}}),{threshold:.12});
+  els.forEach(el=>io.observe(el));
+}else{els.forEach(el=>el.classList.add("show"))}
+</script>
+
+</body>
+</html>
